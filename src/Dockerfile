@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl gd xml bcmath php-sqlite3
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl gd xml bcmath sqlite3
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
